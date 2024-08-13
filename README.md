@@ -30,3 +30,9 @@ http://194.5.157.105:3000/
 ```
 
 ![My Image](https://github.com/otkach4rest/FedEx-Label/blob/main/Screenshot_1.png)  
+![My Image](https://github.com/otkach4rest/FedEx-Label/blob/main/Screenshot_2.png)  
+![My Image](https://github.com/otkach4rest/FedEx-Label/blob/main/Screenshot_3.png)  
+
+
+[Link to my PDF](https://github.com/otkach4rest/FedEx-Label/blob/main/PAPER_4X6.pdf)
+[Link to my PDF](https://github.com/otkach4rest/FedEx-Label/blob/main/PAPER_4X8.pdf)
