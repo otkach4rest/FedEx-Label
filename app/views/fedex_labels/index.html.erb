@@ -1,0 +1,44 @@
+<div class="pt-5 container">
+
+  <h1>FedEx Labels</h1>
+  <code>
+    <%= @version_info %>
+  </code>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Service Type</th>
+      <th>Label Stock Type</th>
+      <th>Options Type</th>
+      <th>Job ID(Response Details)</th>
+      <th>Download</th>
+    </tr>
+
+    <% @labels.each do |label| %>
+      <tr>
+          <td><a href="/fedex_labels/<%= label.id %>"><%= label.id %></a></td>
+          <td><a href="/fedex_labels/<%= label.service_type %>"><%= label.service_type %></a></td>
+          <td><a href="/fedex_labels/<%= label.label_stock_type %>"><%= label.label_stock_type %></a></td>
+          <td><a href="/fedex_labels/<%= label.id %>"><%= label.options['type'] %></a></td>
+          <td><a href="/fedex_labels/<%= label.id %>"><%= label.response_details['job_id'] %></a></td>
+          <td><%= link_to 'Download', download_fedex_label_path(label) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <ul class="pt-4">
+    <li>
+        <%= link_to "Test - New a FedEx Label", new_fedex_label_path %>
+    </li>
+    <li>
+        <%= link_to "Test - New a FedEx Label with US Shipper", new_fedex_label_with_us_recipient_path %>
+    </li>
+    <li>
+        <%= link_to "Test - New a FedEx Label with CA recipient", new_fedex_label_with_ca_recipient_path %>
+    </li>
+    <li>
+        <%= link_to "Test - New a FedEx Label with JP recipient", new_fedex_label_with_jp_recipient_path %>
+    </li>
+  </ul>
+
+</div>

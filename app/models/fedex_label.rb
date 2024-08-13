@@ -1,0 +1,3 @@
+class FedexLabel < ApplicationRecord
+    
+end

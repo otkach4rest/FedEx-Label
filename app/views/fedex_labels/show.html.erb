@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1>FedEx Label Details </h1>
+  <label>@image</label>
+  <textarea rows="12"><%= @label.image %></textarea>
+  <p><%= link_to "Download PDF", download_fedex_label_path(@label.id) %></p>
+  <label>@options</label>
+  <textarea rows="12"><%= @label.options %></textarea>
+  <label>@response details</label>
+  <textarea rows="12"><%= @label.response_details %></textarea>
+  <ul>
+      <%= link_to "Go Home - FedEx Labels", fedex_labels_path %>
+  </ul>
+  
+</div>
+  

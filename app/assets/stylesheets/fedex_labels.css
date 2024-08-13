@@ -1,0 +1,49 @@
+
+table, th, td {
+    border: 1px solid black;
+}
+
+
+.open {
+    color:red;
+  }
+  .form-fild {
+      position: relative;
+      margin: 20px 0;
+  }
+  .form-fild label {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      padding:5px;
+  }
+  
+  .form-fild.open label {
+      top: -28px;
+      left: 10px;
+  }
+  .form-fild input[type="text"] {
+      padding-left: 160px;
+  }
+  .form-fild textarea {
+      padding-left: 80px;
+  }
+  .form-fild.open textarea, 
+  .form-fild.open input[type="text"] {
+      padding-left: 10px;
+  }
+  textarea,
+  input[type="text"] {
+      padding: 10px;
+      width: 100%;
+  }
+  textarea,
+  input,
+  .form-fild.open label,
+  .form-fild label {
+      -webkit-transition: all 0.2s ease-in-out;
+         -moz-transition: all 0.2s ease-in-out;
+           -o-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out;
+  }
+

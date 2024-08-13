@@ -1,0 +1,133 @@
+
+
+<div class="container">
+    <%= form_with url: "/create_international", method: :post do |form| %>
+    <div class="row">
+        <ul class="pt-5">
+            <li>
+                <%= link_to "Go Home - FedEx Labels", fedex_labels_path %>
+            </li>
+        </ul>
+        <h1 class="pt-5 pb-3">New FedEx Label - Canada</h1>
+        
+        <div class="col-6">
+            <h3>Shipper Address</h3>
+            <hr/>
+            <div class="form-fild">
+                <label>Name :</label>
+                <input type="text" name="shipper[name]" value="<%=@shipper[:name] %>">
+            </div>
+            <div class="form-fild">
+                <label>Company :</label>
+                <input type="text" name="shipper[company]" value="<%=@shipper[:company] %>">
+            </div>
+            <div class="form-fild">
+                <label>Phone Number :</label>
+                <input type="text" name="shipper[phone_number]" value="<%=@shipper[:phone_number] %>">
+            </div>
+            <div class="form-fild">
+                <label>Address :</label>
+                <input type="text" name="shipper[address]" value="<%=@shipper[:address] %>">
+            </div>
+            <div class="form-fild">
+                <label>City :</label>
+                <input type="text" name="shipper[city]" value="<%=@shipper[:city] %>">
+            </div>
+            <div class="form-fild">
+                <label>State :</label>
+                <input type="text" name="shipper[state]" value="<%=@shipper[:state] %>">
+            </div>
+            <div class="form-fild">
+                <label>Postal Code :</label>
+                <input type="text" name="shipper[postal_code]" value="<%=@shipper[:postal_code] %>">
+            </div>
+            <div class="form-fild">
+                <label>Country Code :</label>
+                <input type="text"  name="shipper[country_code]" value="<%=@shipper[:country_code] %>">
+            </div>
+        </div>
+        <div class="col-6">
+            <h3>Recipient Address</h3>
+            <hr/>
+            <div class="form-fild">
+                <label>Name :</label>
+                <input type="text" name="recipient[name]" value="<%=@recipient[:name] %>">
+            </div>
+            <div class="form-fild">
+                <label>Company :</label>
+                <input type="text" name="recipient[company]" value="<%=@recipient[:company] %>">
+            </div>
+            <div class="form-fild">
+                <label>Phone Number :</label>
+                <input type="text" name="recipient[phone_number]" value="<%=@recipient[:phone_number] %>">
+            </div>
+            <div class="form-fild">
+                <label>Address :</label>
+                <input type="text" name="recipient[address]" value="<%=@recipient[:address] %>">
+            </div>
+            <div class="form-fild">
+                <label>City :</label>
+                <input type="text" name="recipient[city]" value="<%=@recipient[:city] %>">
+            </div>
+            <div class="form-fild">
+                <label>State :</label>
+                <input type="text" name="recipient[state]" value="<%=@recipient[:state] %>">
+            </div>
+            <div class="form-fild">
+                <label>Postal Code :</label>
+                <input type="text" name="recipient[postal_code]" value="<%=@recipient[:postal_code] %>">
+            </div>
+            <div class="form-fild">
+                <label>Country Code :</label>
+                <input type="text" name="recipient[country_code]" value="<%=@recipient[:country_code] %>">
+            </div>
+            <div class="form-fild">
+                <label>Residential :</label>
+                <input type="text" name="recipient[residential]" value="<%=@recipient[:residential] %>">
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <h3>Package Info</h3>
+        <hr/>
+        <code class="pb-3">
+            <%= @packages.inspect %>
+        </code>
+        
+        <h3>Example Spec Info</h3>
+        <hr/>
+        <code class="pb-3">
+            <%= @example_spec.inspect %>
+        </code>
+
+        <h3>Shipping Options</h3>
+        <hr/>
+        <code class="pb-3">
+            <%= @shipping_options.inspect %>
+        </code>
+        
+        <h3>Customs Clearance Detail</h3>
+        <hr/>
+        <code class="pb-3">
+            <%= @customs.inspect %>
+        </code>
+    </div>
+    <div class="form-fild">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <% end %>
+
+</div>
+
+
+
+<script>
+$('.form-fild input,.form-fild textarea').focus(function() {
+    $(this).parent().addClass('open');
+});
+
+$('.form-fild input,.form-fild textarea').blur(function() {
+    $(this).parent().removeClass('open');
+});
+</script>
